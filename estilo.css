@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Creo mi paleta de colores */
+:root{
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+    --hoverlink: hsl(281, 83%, 72%);
+    --greendesatured: hsl(163, 76%, 69%);
+    --reddesatured: hsl(2, 96%, 65%);
+}
+
+/* Estilo el body para buenas prácticas */
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    height: 100px;
+    background-color: var(--Paleblue);
+
+}
+/* Estilo main para centrar la card */
+main{
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+/* Estilo la card */
+.card{
+    width: 90%;
+    background-color: var(--Verypaleblue);
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+/* Estilo  quitando margen al figure global*/
+figure{
+    margin: 0;
+}
+/* Estilo la card__img */
+
+.card__img img{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+}
+
+/* Estilo la card__info */
+.card__info{
+    text-align: center;
+    padding: 0 2rem;
+}
+.card__info .card__title{
+    font-weight: 900;
+}
+.card__info .card__description{
+    color: var(--Desaturatedblue);
+}
+
+/* Estilo la card__plan */
+.card__plan{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2rem;
+}
+.card__plan-title{
+    font-weight: 900;
+}
+.card__plan-description{
+    font-size: 0.9em;
+    position: relative;
+    top: -15px;
+    color: var(--Desaturatedblue);
+}
+
+.card__change{
+    color: var(--Brightblue);
+}
+.card__change:hover{
+    color: var(--hoverlink);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Estilo el form__card*/
+.card__form-button{
+    margin: 0.5rem auto;
+    width: 80%;
+}
+.card__btn-primary{
+    width: 100%;
+    padding: 1.1rem;
+    border-radius: 0.7rem;
+    margin: 0.2rem auto;
+    border: none;
+    color: var(--Verypaleblue);
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.card__btn--active{
+    background-color: var(--Brightblue);
+    font-weight: 700;
+}
+.card__btn--active:hover{
+    background-color: var(--greendesatured);
+    transition: all 0.6s ease-in-out;
+    color: var(--Darkblue);
+
+}
+.card__btn-cancel{
+    background: transparent;
+    color: var(--Desaturatedblue);
+    font-weight: 700;
+}
+.card__btn-cancel:hover{
+    background-color: var(--reddesatured);
+    transition: all 0.6s ease-in-out;
+    color: var(--Verypaleblue);
+
+}
+
+/* Creo mediaquerys */
+@media (min-width: 48rem){
+    body{
+        background-image: url(images/pattern-background-desktop.svg);
+        background-size: 100% 50%;
+    }
+    .card{
+        width: 50%;
+        background-color: var(--Verypaleblue);
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+}
+@media (min-width: 64rem){
+    .card{
+        width: 40%;
+    }
+    .card__form-button{
+        margin: 0.1rem auto;
+    }
+}
+@media (min-width: 80rem){ 
+    .card{
+        width: 30%;
+    }
+    .card__form-button{
+        margin: 0 auto;
+    }
+}
+@media (min-width: 90rem){ 
+    .card{
+        width: 25%;
+    }
+    .card__form-button{
+        margin: 0.5rem auto;
+    }
+}
+@media (min-width: 120rem){ 
+    .card{
+        width: 20%;
+    }
+}
+@media (min-width: 150rem){ 
+    .card{
+        width: 15%;
+    }
+}
