@@ -10,6 +10,7 @@
     --hoverlink: hsl(281, 83%, 72%);
     --greendesatured: hsl(163, 76%, 69%);
     --reddesatured: hsl(2, 96%, 65%);
+    --white: hsl(0, 0%, 100%);
 }
 
 /* Estilo el body para buenas prácticas */
@@ -38,7 +39,7 @@ main{
 /* Estilo la card */
 .card{
     width: 90%;
-    background-color: var(--Verypaleblue);
+    background-color: var(--white);
     margin: 0 auto;
     border-radius: 1rem;
 }
@@ -68,10 +69,18 @@ figure{
 
 /* Estilo la card__plan */
 .card__plan{
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
+    background-color: var(--Verypaleblue);
+    width:80%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 70px;
+    
 }
 .card__plan-title{
     font-weight: 900;
@@ -137,10 +146,11 @@ figure{
     }
     .card{
         width: 50%;
-        background-color: var(--Verypaleblue);
+        background-color: var(--white);
         margin: 0 auto;
         border-radius: 1rem;
     }
+    
 }
 @media (min-width: 64rem){
     .card{
@@ -160,7 +170,7 @@ figure{
 }
 @media (min-width: 90rem){ 
     .card{
-        width: 25%;
+        width: 29%;
     }
     .card__form-button{
         margin: 0.5rem auto;
