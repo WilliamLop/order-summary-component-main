@@ -84,12 +84,19 @@ figure{
 }
 .card__plan-title{
     font-weight: 900;
+    font-size: 1em;
 }
 .card__plan-description{
     font-size: 0.9em;
     position: relative;
-    top: -15px;
+    top: -10px;
     color: var(--Desaturatedblue);
+}
+.card__plan-content{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
 }
 
 .card__change{
@@ -119,6 +126,8 @@ figure{
 .card__btn--active{
     background-color: var(--Brightblue);
     font-weight: 700;
+    filter: drop-shadow(1px 1px 4px  var(--Desaturatedblue));
+
 }
 .card__btn--active:hover{
     background-color: var(--greendesatured);
